@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="center">Batman VS Superman</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <a href="<%= pages_batman_path %>">
+          <%= image_tag("batman.jpg", height: 600, width: 600) %>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="<%= pages_superman_path %>">
+          <%= image_tag("superman.jpg", height: 600, width: 600) %>
+        </a>
+      </div>
+    </div>
+  </div>   
+</div>
+<script>
+  $.backstretch("<%= asset_path 'bg.jpg' %>");
+</script>
