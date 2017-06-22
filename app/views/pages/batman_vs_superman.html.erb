@@ -2,17 +2,46 @@
   <div class="row">
     <div class="col-md-12">
       <h1 class="center">Batman VS Superman</h1>
+      <br>
     </div>
     <div class="row">
       <div class="col-md-6">
         <a href="<%= pages_batman_path %>">
           <%= image_tag("batman.jpg", height: 600, width: 600) %>
         </a>
+        <h3 class="text-votes">Batman Votes: <%= @batman_votes %> </h3>
+        <br>
+        <form class="form-half" method="post" action="<%= pages_save_vote_batman_path %>">
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token%>
+          <div class="form-group">
+            <label for="name" class="text-form">Nombre :</label>
+            <input type="text" class="form-control" name="name" placeholder="Ingresa tu Nombre">
+          </div>
+          <div class="form-group">
+            <label for="name" class="text-form">E-mail :</label>
+            <input type="text" class="form-control" name="email" placeholder="Ingresa tu E-mail">
+          </div>
+          <button type="submit" class="btn btn-success btn-lg">Votar</button>
+        </form>
       </div>
       <div class="col-md-6">
         <a href="<%= pages_superman_path %>">
           <%= image_tag("superman.jpg", height: 600, width: 600) %>
         </a>
+        <h3 class="text-votes">Superman Votes: <%= @superman_votes %> </h3>
+        <br>
+        <form class="form-half" method="post" action="<%= pages_save_vote_superman_path %>">
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token%>
+          <div class="form-group">
+            <label for="name" class="text-form">Nombre :</label>
+            <input type="text" class="form-control" name="name" placeholder="Ingresa tu Nombre">
+          </div>
+          <div class="form-group">
+            <label for="name" class="text-form">E-mail :</label>
+            <input type="text" class="form-control" name="email" placeholder="Ingresa tu E-mail">
+          </div>
+          <button type="submit" class="btn btn-success btn-lg">Votar</button>
+        </form>
       </div>
     </div>
   </div>   
